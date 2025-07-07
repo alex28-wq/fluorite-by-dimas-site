@@ -1,31 +1,80 @@
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5fbff;
     color: #333;
+}
+
+header.hero {
+    background: linear-gradient(to right, #d0e8ff, #a0d2ff);
     text-align: center;
+    padding: 3em 1em;
+    animation: fadeIn 2s ease-in;
 }
-header {
-    background-color: #111;
-    color: white;
-    padding: 2em 1em;
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
 }
+
+h1 {
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 0.5em auto;
+    max-width: 600px;
+}
+
 .button {
     display: inline-block;
-    margin: 1em;
-    padding: 0.8em 1.2em;
-    background-color: #4b6cb7;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
-table {
-    width: 90%;
+
+.button:hover {
+    background: #0056b3;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 2em auto;
-    border-collapse: collapse;
-}
-th, td {
+    gap: 1.5em;
+    max-width: 1000px;
     padding: 1em;
-    border-bottom: 1px solid #ccc;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
